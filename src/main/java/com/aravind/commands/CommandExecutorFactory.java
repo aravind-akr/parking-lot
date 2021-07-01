@@ -1,6 +1,8 @@
 package com.aravind.commands;
 
 import com.aravind.OutputPrinter;
+import com.aravind.exceptions.InvalidCommandException;
+import com.aravind.models.Command;
 import com.aravind.service.ParkingLotService;
 
 import java.util.HashMap;
@@ -33,5 +35,16 @@ public class CommandExecutorFactory {
         commands.put(SlotForRegNumCommandExecutor.COMMAND_NAME,
                 new SlotForRegNumCommandExecutor(parkingLotService,outputPrinter));
 
+        commands.put(ExitCommandExecutor.COMMAND_NAME,
+                new ExitCommandExecutor(parkingLotService,outputPrinter));
+
+    }
+
+    public CommandExecutor getCommandExecutor(Command command) {
+        final CommandExecutor commandExecutor = commands.get(command.getCommandName());
+        if(commandExecutor == null){
+            throw new InvalidCommandException();
+        }
+        return commandExecutor;
     }
 }
