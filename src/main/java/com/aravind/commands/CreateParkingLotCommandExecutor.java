@@ -10,11 +10,11 @@ import com.aravind.validator.IntegerValidator;
 
 import java.util.List;
 
-public class CreateParkingLotCommand extends CommandExecutor{
+public class CreateParkingLotCommandExecutor extends CommandExecutor{
 
-    public final String COMMAND_NAME = "create_parking_lot";
+    public static String COMMAND_NAME = "create_parking_lot";
 
-    public CreateParkingLotCommand(ParkingLotService parkingLotService, OutputPrinter outputPrinter) {
+    public CreateParkingLotCommandExecutor(ParkingLotService parkingLotService, OutputPrinter outputPrinter) {
         super(parkingLotService, outputPrinter);
     }
 
