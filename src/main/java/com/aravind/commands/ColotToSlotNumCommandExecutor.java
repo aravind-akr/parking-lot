@@ -10,7 +10,7 @@ import java.util.stream.Collectors;
 
 public class ColotToSlotNumCommandExecutor extends CommandExecutor{
 
-    public static String COMMAND_NAME = "slot_numbers_for_cars_with_colors";
+    public static String COMMAND_NAME = "slot_numbers_for_cars_with_colour";
 
     public ColotToSlotNumCommandExecutor(ParkingLotService parkingLotService, OutputPrinter outputPrinter) {
         super(parkingLotService, outputPrinter);

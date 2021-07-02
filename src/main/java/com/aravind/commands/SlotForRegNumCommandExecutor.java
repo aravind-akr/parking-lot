@@ -11,7 +11,7 @@ import java.util.stream.Stream;
 
 public class SlotForRegNumCommandExecutor extends CommandExecutor{
 
-    public static String COMMAND_NAME = "slot_number_for_reg_number";
+    public static String COMMAND_NAME = "slot_number_for_registration_number";
 
     public SlotForRegNumCommandExecutor(ParkingLotService parkingLotService, OutputPrinter outputPrinter) {
         super(parkingLotService, outputPrinter);
