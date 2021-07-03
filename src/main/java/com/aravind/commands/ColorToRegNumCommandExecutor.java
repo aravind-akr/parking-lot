@@ -8,6 +8,9 @@ import com.aravind.service.ParkingLotService;
 import java.util.List;
 import java.util.stream.Collectors;
 
+/**
+ * Executor to check the car details registration numbers for a given color
+ */
 public class ColorToRegNumCommandExecutor extends CommandExecutor{
 
     public static String COMMAND_NAME = "registration_numbers_for_cars_with_colour";

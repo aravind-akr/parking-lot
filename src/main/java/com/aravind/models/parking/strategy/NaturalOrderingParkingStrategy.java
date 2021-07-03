@@ -4,6 +4,11 @@ import com.aravind.exceptions.NoFreeSlotAvailableException;
 
 import java.util.TreeSet;
 
+/**
+ * Parking strategy in which the natural ordering of numbers are used in deciding
+ * the slot numbers.
+ * For example, 1st car will be placed in slot 1, 2nd car in slot 2 and so on.
+ */
 public class NaturalOrderingParkingStrategy implements ParkingLotStrategy{
 
     TreeSet<Integer> slotTreeSet;

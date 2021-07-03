@@ -8,11 +8,14 @@ import com.aravind.service.ParkingLotService;
 import java.util.List;
 import java.util.stream.Collectors;
 
-public class ColotToSlotNumCommandExecutor extends CommandExecutor{
+/**
+ * Executor to get the slot numbers for given colour
+ */
+public class ColourToSlotNumCommandExecutor extends CommandExecutor{
 
     public static String COMMAND_NAME = "slot_numbers_for_cars_with_colour";
 
-    public ColotToSlotNumCommandExecutor(ParkingLotService parkingLotService, OutputPrinter outputPrinter) {
+    public ColourToSlotNumCommandExecutor(ParkingLotService parkingLotService, OutputPrinter outputPrinter) {
         super(parkingLotService, outputPrinter);
     }
 

@@ -7,8 +7,10 @@ import com.aravind.service.ParkingLotService;
 
 import java.util.List;
 import java.util.Optional;
-import java.util.stream.Stream;
 
+/**
+ * Executor to get the slot number for the given registration number.
+ */
 public class SlotForRegNumCommandExecutor extends CommandExecutor{
 
     public static String COMMAND_NAME = "slot_number_for_registration_number";

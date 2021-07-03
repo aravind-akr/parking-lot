@@ -6,6 +6,9 @@ import com.aravind.models.Car;
 import com.aravind.models.Command;
 import com.aravind.service.ParkingLotService;
 
+/**
+ * Executor to park the vehicle in the next available slot.
+ */
 public class ParkCommandExecutor extends CommandExecutor{
 
     public static String COMMAND_NAME = "park";

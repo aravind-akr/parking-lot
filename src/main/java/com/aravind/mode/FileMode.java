@@ -6,6 +6,9 @@ import com.aravind.models.Command;
 
 import java.io.*;
 
+/**
+ * Mode running in which input commands are given in a file.
+ */
 public class FileMode extends Mode{
     private String fileName;
 

@@ -7,6 +7,9 @@ import com.aravind.validator.IntegerValidator;
 
 import java.util.List;
 
+/**
+ * Executor to run the leave command to make the car leave from the slot and returns the slot number.
+ */
 public class LeaveCommandExecutor extends CommandExecutor{
 
     public static String COMMAND_NAME = "leave";

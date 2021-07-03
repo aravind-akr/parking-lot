@@ -10,6 +10,9 @@ import com.aravind.validator.IntegerValidator;
 
 import java.util.List;
 
+/**
+ * Executor to create a parking lot with the given number, which is passes in the command line
+ */
 public class CreateParkingLotCommandExecutor extends CommandExecutor{
 
     public static String COMMAND_NAME = "create_parking_lot";

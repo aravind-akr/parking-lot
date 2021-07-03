@@ -8,6 +8,9 @@ import com.aravind.models.Command;
 
 import java.io.IOException;
 
+/**
+ * Interface for mode of the program in which it can be ran.
+ */
 public abstract class Mode {
 
     private CommandExecutorFactory commandExecutorFactory;
@@ -18,6 +21,11 @@ public abstract class Mode {
         this.outputPrinter = outputPrinter;
     }
 
+    /**
+     * Helper command to process a command. It basically uses {@link CommandExecutor} to run the
+     * given command
+     * @param command to be processed
+     */
     protected void processCommand(final Command command){
         final CommandExecutor commandExecutor = commandExecutorFactory.getCommandExecutor(command);
         if(commandExecutor.validate(command)){
@@ -28,5 +36,9 @@ public abstract class Mode {
         }
     }
 
+    /**
+     * Abstract method to process the mode. Each mode has its own process.
+     * @throws IOException
+     */
     public abstract void process() throws IOException;
 }

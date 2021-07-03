@@ -8,6 +8,9 @@ import com.aravind.service.ParkingLotService;
 
 import java.util.List;
 
+/**
+ * Executor to provide the status of parking lot, with the slot numbers, registration number and color of the Car
+ */
 public class StatusCommandExecutor extends CommandExecutor{
 
     public static String COMMAND_NAME = "status";

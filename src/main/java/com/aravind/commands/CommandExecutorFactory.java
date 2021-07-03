@@ -8,6 +8,9 @@ import com.aravind.service.ParkingLotService;
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * Factory to get correct {@link CommandExecutor} from a given command
+ */
 public class CommandExecutorFactory {
     private Map<String, CommandExecutor> commands = new HashMap<>();
 
@@ -29,8 +32,8 @@ public class CommandExecutorFactory {
         commands.put(ColorToRegNumCommandExecutor.COMMAND_NAME,
                 new ColorToRegNumCommandExecutor(parkingLotService,outputPrinter));
 
-        commands.put(ColotToSlotNumCommandExecutor.COMMAND_NAME,
-                new ColotToSlotNumCommandExecutor(parkingLotService,outputPrinter));
+        commands.put(ColourToSlotNumCommandExecutor.COMMAND_NAME,
+                new ColourToSlotNumCommandExecutor(parkingLotService,outputPrinter));
 
         commands.put(SlotForRegNumCommandExecutor.COMMAND_NAME,
                 new SlotForRegNumCommandExecutor(parkingLotService,outputPrinter));
@@ -40,6 +43,12 @@ public class CommandExecutorFactory {
 
     }
 
+    /**
+     * Gets {@link CommandExecutor} for a particular command. It basically uses command to
+     *fetch its corresponding executor
+     * @param command for which executor has to be fetched
+     * @return CommandExecutor
+     */
     public CommandExecutor getCommandExecutor(Command command) {
         final CommandExecutor commandExecutor = commands.get(command.getCommandName());
         if(commandExecutor == null){

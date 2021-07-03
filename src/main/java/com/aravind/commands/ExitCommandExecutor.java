@@ -4,6 +4,9 @@ import com.aravind.OutputPrinter;
 import com.aravind.models.Command;
 import com.aravind.service.ParkingLotService;
 
+/**
+ * Executor to handle exiting from the parking lot service. Used in interactive mode.
+ */
 public class ExitCommandExecutor extends CommandExecutor{
 
     public static String COMMAND_NAME = "exit";
